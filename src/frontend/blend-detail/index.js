@@ -7,13 +7,11 @@ const BlendDetail = () => {
   const [result, setResult] = useState(null);
 
   useEffect(async () => {
+
       const result = {};
       const { data: blend } = await axios.get(`/api/v1/blends/${id}`);
-
       const {data: blends} = await axios.get('/api/v1/blends');
-
       const {data: spices} = await axios.get('/api/v1/spices');
-
       setResult({blend, blends, spices});
 
   }, [id]);
@@ -30,9 +28,7 @@ const BlendDetail = () => {
           <div>Blend Spices:</div>
           <ul>
             {
-            // getSpicesFromBlend(blend.id, blend.blends, blend.spices).map((spice) => (
-            //   <li key={spice.id}>{spice.name}</li>
-            // ))
+
             }
           </ul>
 
